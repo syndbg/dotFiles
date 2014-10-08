@@ -1,0 +1,60 @@
+'exception-reporting':
+  'userId': 'cbdf72bf-cb9d-a669-d3b6-fcafa4d3662e'
+'welcome':
+  'showOnStartup': false
+'metrics': false
+'editor':
+  'fontFamily': 'DejaVu Sans Mono'
+  'fontSize': 22
+  'showInvisibles': true
+  'tabLength': 4
+  'scrollSensitivity': 60
+  'showIndentGuide': true
+  'preferredLineLength': 100
+'core':
+  'disabledPackages': [
+    'welcome'
+    'styleguide'
+    'spell-check'
+    'metrics'
+    'feedback'
+    'jshint'
+    'linter-jshint'
+    'eslint'
+    'autocomplete'
+  ]
+  'ignoredNames': [
+    '*.pyc'
+    '.idea'
+    '*~'
+  ]
+  'themes': [
+    'seti-ui'
+    'seti-monokai'
+  ]
+'tree-view':
+  'showOnRightSide': true
+  'hideIgnoredNames': true
+  'hideVcsIgnoredFiles': true
+'linter-pep8':
+  'ignoreErrorCodes': [
+    'W0232'
+  ]
+'linter-flake8':
+  'maxLineLength': 100
+'linter':
+  'showStatusBarWhenCursorIsInErrorRange': true
+'whitespace': {}
+'highlight-line':
+  'underline':
+    'solid': false
+  'enableSelectionBorder': true
+  'enableUnderline': false
+  'hideHighlightOnSelect': true
+'merge-conflicts':
+  'gitPath': '/usr/bin/git'
+'linter-eslint':
+  'defaultEslintConfig': '/home/synd/.eslintrc'
+  'eslintExecutablePath': '/usr/bin/eslint'
+'autocomplete-plus':
+  'autoActivationDelay': 800
