@@ -4,21 +4,3 @@
 [submodule ".vim/bundle/Vundle.vim"]
 	path = .vim/bundle/Vundle.vim
 	url = git@github.com:gmarik/Vundle.vim.git
-[submodule ".vim/bundle/vim-monokai"]
-	path = .vim/bundle/vim-monokai
-	url = git@github.com:sickill/vim-monokai.git
-[submodule ".vim/bundle/vim-airline"]
-	path = .vim/bundle/vim-airline
-	url = git@github.com:bling/vim-airline.git
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
-	url = git@github.com:scrooloose/nerdtree.git
-[submodule ".vim/bundle/molokai"]
-	path = .vim/bundle/molokai
-	url = git@github.com:tomasr/molokai.git
-[submodule ".vim/bundle/ctrlp.vim"]
-	path = .vim/bundle/ctrlp.vim
-	url = git@github.com:kien/ctrlp.vim.git
-[submodule ".vim/bundle/vim-better-whitespace"]
-	path = .vim/bundle/vim-better-whitespace
-	url = git@github.com:ntpeters/vim-better-whitespace.git
