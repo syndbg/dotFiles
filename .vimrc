@@ -16,6 +16,7 @@ Plugin 'sickill/vim-monokai'
 Plugin 'tomasr/molokai'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()            " required
 
