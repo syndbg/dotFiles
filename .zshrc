@@ -8,7 +8,7 @@ source ~/z/z.sh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="ys"
+ZSH_THEME="mindful-space"
 
 # Example aliases
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -50,7 +50,7 @@ alias bower='noglob bower'
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git command-not-found tmux npm pip web-search)
+plugins=(git command-not-found tmux npm pip sudo)
 
 source $ZSH/oh-my-zsh.sh
 # User configuration
@@ -63,13 +63,7 @@ export TERM=xterm-256color
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 export ZSH_TMUX_AUTOSTART=true
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-    export EDITOR='vim'
-fi
-# else
-#   export EDITOR='mvim'
-# fi
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
