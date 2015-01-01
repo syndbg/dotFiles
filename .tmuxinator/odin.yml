@@ -1,0 +1,27 @@
+# ~/.tmuxinator/odin.yml
+
+name: odin
+root: ~/Odin
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: workon odin1.7
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+pre_window: workon odin1.7
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+  - editor:
+      layout: main-vertical
+      panes:
+        - #console
+  - server: python manage.py runserver
+  - git: gss
