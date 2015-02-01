@@ -56,9 +56,6 @@ plugins=(git command-not-found tmux npm pip sudo)
 source $ZSH/oh-my-zsh.sh
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/IntelliJ-IDEA/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
-
 
 export TERM=xterm-256color
 # You may need to manually set your language environment
@@ -71,5 +68,9 @@ export EDITOR='vim'
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-export PATH="$HOME/.rbenv/bin:$PATH"
+
+# PATH is actually set in .profile. I just need to extend it
+# export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:"
+# export MANPATH="/usr/local/man:$MANPATH"
+export PATH="$PATH:$HOME/.rbenv/bin"
 eval "$(rbenv init -)"
