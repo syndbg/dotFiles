@@ -1,0 +1,9 @@
+[
+    {
+        "command": "advanced_new_file_new",
+        "keys":
+        [
+            "ctrl+alt+n"
+        ],
+    }
+]
