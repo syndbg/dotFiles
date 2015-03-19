@@ -4,6 +4,8 @@ export ZSH=$HOME/.oh-my-zsh
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 source ~/z/z.sh
+source ~/.nvm/nvm.sh
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -14,7 +16,6 @@ ZSH_THEME="mindful-space"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias zshconfig='vim ~/.zshrc'
 alias bower='noglob bower'
-alias pip='pip3'
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -72,5 +73,5 @@ export EDITOR='vim'
 # PATH is actually set in .profile. I just need to extend it
 # export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:"
 # export MANPATH="/usr/local/man:$MANPATH"
-export PATH="$PATH:$HOME/.rbenv/bin"
+export PATH="$PATH:$HOME/.rbenv/bin:$HOME/eclipse-luna/eclipse:$HOME/android-sdks/platform-tools"
 eval "$(rbenv init -)"
