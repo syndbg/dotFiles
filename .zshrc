@@ -4,7 +4,6 @@ export ZSH=$HOME/.oh-my-zsh
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 source ~/z/z.sh
-source ~/.nvm/nvm.sh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -73,5 +72,5 @@ export EDITOR='vim'
 # PATH is actually set in .profile. I just need to extend it
 # export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:"
 # export MANPATH="/usr/local/man:$MANPATH"
-export PATH="$PATH:$HOME/.rbenv/bin:$HOME/eclipse-luna/eclipse:$HOME/android-sdks/platform-tools"
+export PATH="$PATH:$HOME/npm/bin:$HOME/.rbenv/bin:$HOME/eclipse-luna/eclipse:$HOME/android-sdks/platform-tools"
 eval "$(rbenv init -)"
