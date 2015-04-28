@@ -3,7 +3,7 @@ export ZSH=$HOME/.oh-my-zsh
 #export PIP_REQUIRE_VIRTUALENV=true
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
-source ~/z/z.sh
+source ~/z.sh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -12,7 +12,7 @@ source ~/z/z.sh
 ZSH_THEME="mindful-space"
 
 # Example aliases
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# alias ohmyzsh="mate ~/.oh-my-	"
 alias zshconfig='subl ~/.zshrc'
 alias bower='noglob bower'
 
