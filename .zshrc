@@ -13,7 +13,7 @@ ZSH_THEME="mindful-space"
 
 # Example aliases
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias zshconfig='vim ~/.zshrc'
+alias zshconfig='subl ~/.zshrc'
 alias bower='noglob bower'
 
 # Uncomment the following line to use case-sensitive completion.
@@ -51,17 +51,13 @@ alias bower='noglob bower'
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git command-not-found tmux npm pip sudo)
+plugins=(git command-not-found tmux npm pip sudo colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
-# User configuration
-
-
 export TERM=xterm-256color
-# You may need to manually set your language environment
 export LANG=en_US.UTF-8
 export ZSH_TMUX_AUTOSTART=true
-export EDITOR='vim'
+export EDITOR="subl -w"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
