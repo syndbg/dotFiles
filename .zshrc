@@ -57,7 +57,7 @@ source $ZSH/oh-my-zsh.sh
 export TERM=xterm-256color
 export LANG=en_US.UTF-8
 export ZSH_TMUX_AUTOSTART=true
-export EDITOR="subl -w"
+export EDITOR="vim"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
