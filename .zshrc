@@ -51,7 +51,7 @@ alias bower='noglob bower'
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git command-not-found tmux npm pip sudo bundler colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
+plugins=(git rails ruby docker command-not-found tmux npm pip sudo bundler colored-man colorize github vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 export TERM=xterm-256color
@@ -72,4 +72,7 @@ export EDITOR="vim"
 export PATH="$PATH:$HOME/npm/bin:$HOME/.rbenv/bin:$HOME/eclipse-luna/eclipse:$HOME/android-sdks/platform-tools"
 eval "$(rbenv init -)"
 # enable boot2docker (OSX specific)
-$(boot2docker shellinit)
+boot2docker shellinit
+export DOCKER_HOST=tcp://192.168.59.103:2376
+    export DOCKER_CERT_PATH=/Users/syndbg/.boot2docker/certs/boot2docker-vm
+    export DOCKER_TLS_VERIFY=1
