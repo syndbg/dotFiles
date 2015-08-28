@@ -69,10 +69,16 @@ export EDITOR="vim"
 # PATH is actually set in .profile. I just need to extend it
 # export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:"
 # export MANPATH="/usr/local/man:$MANPATH"
-export PATH="$PATH:$HOME/npm/bin:$HOME/.rbenv/bin:$HOME/eclipse-luna/eclipse:$HOME/android-sdks/platform-tools"
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH="$PATH:$HOME/npm/bin:$HOME/.rbenv/bin:$ANDROID_HOME/platform-tools"
 eval "$(rbenv init -)"
-# enable boot2docker (OSX specific)
-boot2docker shellinit
-export DOCKER_HOST=tcp://192.168.59.103:2376
-    export DOCKER_CERT_PATH=/Users/syndbg/.boot2docker/certs/boot2docker-vm
-    export DOCKER_TLS_VERIFY=1
+
+
+# Tell `docker` to use `docker-machine`. Deprecated `boot2docker`.
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://192.168.99.100:2376"
+export DOCKER_CERT_PATH="/Users/syndbg/.docker/machine/machines/dev"
+export DOCKER_MACHINE_NAME="dev"
+# Run this command to configure your shell:
+eval "$(docker-machine env dev)"
+
