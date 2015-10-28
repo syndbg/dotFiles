@@ -70,7 +70,7 @@ export EDITOR="vim"
 # export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:"
 # export MANPATH="/usr/local/man:$MANPATH"
 export ANDROID_HOME=~/Library/Android/sdk
-export PATH="$PATH:$HOME/npm/bin:$HOME/.rbenv/bin:$ANDROID_HOME/platform-tools"
+export PATH="$PATH:/usr/local/sbin/:$HOME/.cabal/bin:$HOME/npm/bin:$HOME/.rbenv/bin:$ANDROID_HOME/platform-tools"
 eval "$(rbenv init -)"
 
 
@@ -81,4 +81,3 @@ export DOCKER_CERT_PATH="/Users/syndbg/.docker/machine/machines/dev"
 export DOCKER_MACHINE_NAME="dev"
 # Run this command to configure your shell:
 eval "$(docker-machine env dev)"
-
