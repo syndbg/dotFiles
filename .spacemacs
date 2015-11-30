@@ -8,11 +8,16 @@
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (ie. `~/.mycontribs/')
    dotspacemacs-configuration-layer-path '()
+   ;; Ws-butler - whitespace trimming
+   dotspacemacs-additional-packages '(ws-butler)
    ;; List of configuration layers to load. If it is the symbol `all' instead
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(auto-completion
      osx
+     (colors :variables colors-enable-nyan-cat-progress-bar t)
+     prodigy
+     go
      eyebrowse
      spotify
      diff-hl
@@ -58,7 +63,10 @@ before layers configuration."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(monokai)
+   dotspacemacs-themes '(monokai
+                         spacemacs-dark
+                         zenburn
+                         hickey)
    ;; If non nil the cursor color matches the state color.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
@@ -175,6 +183,7 @@ layers configuration."
  '(column-number-mode t)
  '(css-indent-offset 2)
  '(magit-use-overlays nil)
+ '(paradox-github-token t)
  '(ring-bell-function (quote ignore) t)
  '(show-paren-mode t)
  '(tool-bar-mode nil)
@@ -186,5 +195,6 @@ layers configuration."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(default ((((class color) (min-colors 257)) (:foreground "#F8F8F2" :background "#272822")) (((class color) (min-colors 89)) (:foreground "#F5F5F5" :background "#1B1E1C"))))
  '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
  '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
