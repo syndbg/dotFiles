@@ -84,3 +84,6 @@ export DOCKER_CERT_PATH="/Users/syndbg/.docker/machine/machines/dev"
 export DOCKER_MACHINE_NAME="dev"
 # Run this command to configure your shell:
 eval "$(docker-machine env dev)"
+
+export NVM_DIR="~/.nvm"
+. ~/.nvm/nvm.sh
