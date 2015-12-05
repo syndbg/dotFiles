@@ -70,7 +70,10 @@ export EDITOR="emacsclient -c"
 # export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:"
 # export MANPATH="/usr/local/man:$MANPATH"
 export ANDROID_HOME=~/Library/Android/sdk
-export PATH="$PATH:/usr/local/sbin/:$HOME/.cabal/bin:$HOME/npm/bin:$HOME/.rbenv/bin:$ANDROID_HOME/platform-tools"
+export GOPATH=~/gocode
+export GOROOT=/usr/local/opt/go/libexec
+export PATH="$PATH:/usr/local/sbin/:$GOPATH/bin:$GOROOT/bin:$HOME/.cabal/bin"
+export PATH="$PATH:$HOME/npm/bin:$HOME/.rbenv/bin:$ANDROID_HOME/platform-tools"
 eval "$(rbenv init -)"
 
 
