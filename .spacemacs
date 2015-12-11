@@ -154,19 +154,31 @@ before layers configuration."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
-   (define-key evil-motion-state-map "f" 'evil-find-char)
-   (setq save-interprogram-paste-before-kill t)
-   (setq-default system-uses-terminfo nil
-                 helm-pt-insert-at-point nil
-                 scss-compile-at-save nil
-                 lua-indent-level 2
-                 evil-shift-width 2
-                 web-mode-markup-indent-offset 2
-                 web-mode-css-indent-offset 2
-                 web-mode-code-indent-offset 2)
+  (define-key evil-motion-state-map "f" 'evil-find-char)
+  (setq save-interprogram-paste-before-kill t)
+  (setq-default system-uses-terminfo nil
+                require-final-newline t
+                cursor-type 'bar
+                evil-insert-state-cursor 'bar
+                helm-pt-insert-at-point nil
+                scss-compile-at-save nil
+                lua-indent-level 2
+                evil-shift-width 2
+                web-mode-markup-indent-offset 2
+                web-mode-css-indent-offset 2
+                web-mode-code-indent-offset 2)
 
- (global-linum-mode)
-)
+  ;; Show line numbers globally
+  (global-linum-mode)
+
+  ;; Show indent guides globally
+  (indent-guide-global-mode)
+
+  ;; Trim trailing white spaces globally
+  (ws-butler-global-mode)
+
+  ;; Start in transparent mode
+  (spacemacs/toggle-transparent-frame))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
