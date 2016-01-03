@@ -16,12 +16,14 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(auto-completion
+     (shell :variables shell-default-shell  eshell)
      osx
      (colors :variables colors-enable-nyan-cat-progress-bar t)
      prodigy
+     (python :variables python-enable-yapf-format-on-save t)
      go
      eyebrowse
-     spotify
+     ansible
      diff-hl
      git
      html
@@ -134,20 +136,20 @@ before layers configuration."
 
   ;; (when buffer-file-name
   ;; ...)
-  (defadvice switch-to-buffer (before save-buffer-now activate)
-    (when buffer-file-name (save-buffer)))
-  (defadvice other-window (before other-window-now activate)
-    (when buffer-file-name (save-buffer)))
-  (defadvice windmove-up (before other-window-now activate)
-    (when buffer-file-name (save-buffer)))
-  (defadvice windmove-down (before other-window-now activate)
-    (when buffer-file-name (save-buffer)))
-  (defadvice windmove-left (before other-window-now activate)
-    (when buffer-file-name (save-buffer)))
-  (defadvice windmove-right (before other-window-now activate)
-    (when buffer-file-name (save-buffer)))
-  (add-hook 'focus-out-hook (lambda () (when buffer-file-name (save-buffer))))
-  (setq save-interprogram-paste-before-kill t)
+  ;; (defadvice switch-to-buffer (before save-buffer-now activate)
+  ;;   (when buffer-file-name (save-buffer)))
+  ;; (defadvice other-window (before other-window-now activate)
+  ;;   (when buffer-file-name (save-buffer)))
+  ;; (defadvice windmove-up (before other-window-now activate)
+  ;;   (when buffer-file-name (save-buffer)))
+  ;; (defadvice windmove-down (before other-window-now activate)
+  ;;   (when buffer-file-name (save-buffer)))
+  ;; (defadvice windmove-left (before other-window-now activate)
+  ;;   (when buffer-file-name (save-buffer)))
+  ;; (defadvice windmove-right (before other-window-now activate)
+  ;;   (when buffer-file-name (save-buffer)))
+  ;; (add-hook 'focus-out-hook (lambda () (when buffer-file-name (save-buffer))))
+  ;; (setq save-interprogram-paste-before-kill t)
   )
 
 (defun dotspacemacs/config ()
