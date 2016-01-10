@@ -1,4 +1,4 @@
-;; -*- mode: dotspacemacs -*-
+
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
@@ -16,32 +16,38 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(auto-completion
-     (shell :variables shell-default-shell  eshell)
+     (shell :variables shell-default-shell 'eshell)
      osx
      (colors :variables colors-enable-nyan-cat-progress-bar t)
-     prodigy
      (python :variables python-enable-yapf-format-on-save t)
-     go
-     eyebrowse
      ansible
-     diff-hl
-     git
-     html
-     css
-     haskell
      clojure
+     css
+     diff-hl
+     dockerfile
+     git
+     github
+     go
+     haskell
+     html
      javascript
      markdown
      org
      puppet
+     react
+     spacemacs-layout
+     xkcd
      (ruby :variables
            ruby-version-manager 'rbenv
            ruby-enable-ruby-on-rails-support t)
      ruby-on-rails
      semantic
      syntax-checking
+     version-control
+     ;; vim-like
      unimpaired
-     version-control)
+     vim-powerline)
+
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
