@@ -8,9 +8,6 @@ alias dco="docker-compose"
 alias doc="docker-compose"
 alias dm="docker-machine"
 alias bower='noglob bower'
-# The removed Zsh git alias
-alias gdc="gd --cached"
-
 export TERM=xterm-256color
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -39,29 +36,25 @@ source ~/zgen/zgen.zsh
 if ! zgen saved; then
     echo "Creating a zgen save"
 
-    zgen oh-my-zsh
-
+    zgen prezto
+    zgen prezto editor key-bindings 'emacs'
+    zgen prezto prompt theme 'steeef'
     # plugins
-    zgen load zsh-users/zsh-syntax-highlighting
-    zgen oh-my-zsh plugins/brew
-    zgen oh-my-zsh plugins/colorize
-    zgen oh-my-zsh plugins/command-not-found
-    zgen oh-my-zsh plugins/docker
-    zgen oh-my-zsh plugins/gitfast
-    zgen oh-my-zsh plugins/github
-    zgen oh-my-zsh plugins/npm
-    zgen oh-my-zsh plugins/osx
-    zgen oh-my-zsh plugins/pip
-    zgen oh-my-zsh plugins/python
-    zgen oh-my-zsh plugins/ruby
-    zgen oh-my-zsh plugins/sudo
-    zgen oh-my-zsh plugins/tmux
-    zgen oh-my-zsh plugins/vagrant
-    zgen oh-my-zsh plugins/virtualenv
+    zgen prezto archive
+    zgen prezto command-not-found
+    zgen prezto completion
+    zgen prezto directory
+    zgen prezto git
+    zgen prezto history
+    zgen prezto homebrew
+    zgen prezto node
+    zgen prezto osx
+    zgen prezto python
+    zgen prezto ruby
+    zgen prezto syntax-highlighting
+    zgen prezto tmux
+    zgen prezto utility
 
-    # theme
-    # zgen load caiogondim/bullet-train-oh-my-zsh-theme bullet-train
-    zgen oh-my-zsh themes/agnoster
     # save all to init script
     zgen save
 fi
