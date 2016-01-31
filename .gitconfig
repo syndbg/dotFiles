@@ -1,0 +1,43 @@
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[user]
+	name = Anton Antonov
+	email = anton.synd.antonov@gmail.com
+[alias] 
+	a = add
+	dl = "!git ll -1"
+	dlc = diff --cached HEAD^
+	remove-merged = !git br --merged | grep -v '^\\*' | xargs git br -d
+	br = branch
+	ci = commit
+	cl = clone
+	co = checkout
+	cp = cherry-pick
+	dc = diff --cached
+	diff = diff --word-diff
+	diffr  = "!f() { git diff "$1"^.."$1"; }; f"
+	dr  = "!f() { git diff "$1"^.."$1"; }; f"
+	f = "!git ls-files | grep -i"
+	gr = grep -Ii
+	grep = grep -Ii
+	la = "!git config -l | grep alias | cut -c 7-"
+	lc  = "!f() { git ll "$1"^.."$1"; }; f"
+	ours = "!f() { git co --ours $@ && git add $@; }; f"
+	r = reset
+	r = reset
+	r1 = reset HEAD^
+	r1 = reset HEAD^
+	r2 = reset HEAD^^
+	r2 = reset HEAD^^
+	rh = reset --hard
+	rh = reset --hard
+	rh1 = reset HEAD^ --hard
+	rh1 = reset HEAD^ --hard
+	rh2 = reset HEAD^^ --hard
+	rh2 = reset HEAD^^ --hard
+	st = status -s
+	theirs = "!f() { git co --theirs $@ && git add $@; }; f"
+[push]
+	default = simple
