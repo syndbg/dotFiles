@@ -8,6 +8,9 @@ alias dco="docker-compose"
 alias doc="docker-compose"
 alias dm="docker-machine"
 alias bower='noglob bower'
+# The removed Zsh git alias
+alias gdc="gd --cached"
+
 export TERM=xterm-256color
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -36,38 +39,26 @@ source ~/zgen/zgen.zsh
 if ! zgen saved; then
     echo "Creating a zgen save"
 
-    zgen prezto
-    zgen prezto editor key-bindings 'emacs'
-    zgen prezto prompt theme 'steeef'
-    # plugins
-    zgen prezto archive
-    zgen prezto command-not-found
-    zgen prezto completion
-    zgen prezto directory
-    zgen prezto git
-    zgen prezto history
-    zgen prezto homebrew
-    zgen prezto node
-    zgen prezto osx
-    zgen prezto python
-    zgen prezto ruby
-    zgen prezto syntax-highlighting
-    zgen prezto tmux
-    zgen prezto utility
+    zgen oh-my-zsh
 
+    zgen load zsh-users/zsh-syntax-highlighting
+    zgen oh-my-zsh plugins/bundler
+    zgen oh-my-zsh plugins/command-not-found
+    zgen oh-my-zsh plugins/docker
+    zgen oh-my-zsh plugins/gitfast
+    zgen oh-my-zsh plugins/npm
+    zgen oh-my-zsh plugins/osx
+    zgen oh-my-zsh plugins/sudo
+    zgen oh-my-zsh plugins/tmux
+
+    zgen oh-my-zsh themes/agnoster
     # save all to init script
     zgen save
 fi
 
-export BULLETTRAIN_NVM_SHOW=true
-export BULLETTRAIN_RUBY_SHOW=true
-export BULLETTRAIN_GO_SHOW=true
 export ZSH_TMUX_AUTOSTART=true
 export DEFAULT_USER=syndbg
 
-
-# export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:"
-# export MANPATH="/usr/local/man:$MANPATH"
 export ANDROID_HOME=~/Library/Android/sdk
 export GOPATH=~/gocode
 export GOROOT=/usr/local/opt/go/libexec
