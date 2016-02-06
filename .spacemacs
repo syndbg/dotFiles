@@ -11,7 +11,7 @@ values."
    ;; Paths must have a trailing slash (ie. `~/.mycontribs/')
    dotspacemacs-configuration-layer-path '()
    ;; Ws-butler - whitespace trimming
-   dotspacemacs-additional-packages '(ws-butler)
+   dotspacemacs-additional-packages '(ws-butler editorconfig)
    ;; List of configuration layers to load. If it is the symbol `all' instead
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
@@ -96,6 +96,8 @@ before layers configuration."
    ;; By default the command key is `:' so ex-commands are executed like in Vim
    ;; with `:' and Emacs commands are executed with `<leader> :'.
    dotspacemacs-command-key ":"
+   ;; Autosave files
+   dotspacemacs-autosave-file-directly t
    ;; If non nil the paste micro-state is enabled. While enabled pressing `p`
    ;; several times cycle between the kill ring content.
    dotspacemacs-enable-paste-micro-state t
@@ -184,6 +186,9 @@ layers configuration."
 
   ;; Trim trailing white spaces globally
   (ws-butler-global-mode)
+
+  ;; Enable editorconfig files code-style
+  (editorconfig-mode 1)
 
   ;; Start in transparent mode
   (spacemacs/toggle-transparent-frame))
