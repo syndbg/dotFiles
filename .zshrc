@@ -71,8 +71,9 @@ export PATH="$PATH:$HOME/npm/bin:$HOME/.rbenv/bin:$ANDROID_HOME/platform-tools"
 export JENV_ROOT=/usr/local/var/jenv
 eval "$(jenv init -)"
 eval "$(rbenv init -)"
-export NVM_DIR="/Users/syndbg/.nvm"
-. ~/.nvm/nvm.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # Tell `docker` to use `docker-machine`. Deprecated `boot2docker`.
 # export DOCKER_TLS_VERIFY="1"
