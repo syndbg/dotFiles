@@ -10,6 +10,10 @@ alias dm="docker-machine"
 alias bower='noglob bower'
 # The removed Zsh git alias
 alias gdc="gd --cached"
+alias va="vagrant"
+alias ans="ansible"
+alias ansp="ansible-playbook"
+alias ansg="ansible-galaxy"
 
 export TERM=xterm-256color
 export LC_ALL=en_US.UTF-8
@@ -61,15 +65,18 @@ export DEFAULT_USER=syndbg
 
 export ANDROID_HOME=~/Library/Android/sdk
 export GOPATH=~/gocode
-export GOROOT=/usr/local/opt/go/libexec
-
 PATH="$PATH:/usr/local/sbin/:$GOPATH/bin:$GOROOT/bin:$HOME/.cabal/bin"
 PATH="$HOME/.jenv/bin:$PATH"
 export PATH="$PATH:$HOME/npm/bin:$HOME/.rbenv/bin:$ANDROID_HOME/platform-tools"
 
 # Version managers
 export JENV_ROOT=/usr/local/var/jenv
+export GOENV_ROOT="$HOME/.goenv"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$GOENV_ROOT/bin:$PYENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
 eval "$(jenv init -)"
+eval "$(pyenv init -)"
 eval "$(rbenv init -)"
 
 export NVM_DIR="$HOME/.nvm"
