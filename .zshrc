@@ -1,7 +1,8 @@
 #export PIP_REQUIRE_VIRTUALENV=true
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+#source /usr/local/bin/virtualenvwrapper.sh
 source ~/z.sh
+source ~/.pyenv/versions/3.5.1/bin/virtualenvwrapper.sh
 
 alias gdc="git diff --cached"
 alias dco="docker-compose"
@@ -10,10 +11,13 @@ alias dm="docker-machine"
 alias bower='noglob bower'
 # The removed Zsh git alias
 alias gdc="gd --cached"
+alias gsho="git show"
 alias va="vagrant"
 alias ans="ansible"
 alias ansp="ansible-playbook"
 alias ansg="ansible-galaxy"
+alias ansv="ansible-vault"
+alias ansl="ansible-lint"
 
 export TERM=xterm-256color
 export LC_ALL=en_US.UTF-8
@@ -66,8 +70,9 @@ export DEFAULT_USER=syndbg
 export ANDROID_HOME=~/Library/Android/sdk
 export GOPATH=~/gocode
 PATH="$PATH:/usr/local/sbin/:$GOPATH/bin:$GOROOT/bin:$HOME/.cabal/bin"
-PATH="$HOME/.jenv/bin:$PATH"
+# PATH="$HOME/.jenv/bin:$PATH"
 export PATH="$PATH:$HOME/npm/bin:$HOME/.rbenv/bin:$ANDROID_HOME/platform-tools"
+export PATH="$PATH:$HOME/.pyenv/versions/3.5.1/bin/"
 
 # Version managers
 export JENV_ROOT=/usr/local/var/jenv
@@ -75,7 +80,7 @@ export GOENV_ROOT="$HOME/.goenv"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$GOENV_ROOT/bin:$PYENV_ROOT/bin:$PATH"
 eval "$(goenv init -)"
-eval "$(jenv init -)"
+# eval "$(jenv init -)"
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
 
