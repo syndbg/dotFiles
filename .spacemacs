@@ -11,31 +11,26 @@ values."
    ;; Paths must have a trailing slash (ie. `~/.mycontribs/')
    dotspacemacs-configuration-layer-path '()
    ;; Ws-butler - whitespace trimming
-   dotspacemacs-additional-packages '(ws-butler editorconfig)
+   dotspacemacs-additional-packages '(ws-butler editorconfig bracketed-paste)
    ;; List of configuration layers to load. If it is the symbol `all' instead
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(auto-completion
-     (shell :variables shell-default-shell 'eshell)
      osx
      (colors :variables colors-enable-nyan-cat-progress-bar t)
-     (python :variables python-enable-yapf-format-on-save t)
      ansible
-     spotify
-     clojure
      dockerfile
      git
      github
+     gtags
+     clipboard
      go
-     dash
-     haskell
      html
      javascript
      markdown
      org
      puppet
      react
-     xkcd
      (ruby :variables
            ruby-version-manager 'rbenv
            ruby-enable-ruby-on-rails-support t)
@@ -163,7 +158,7 @@ before layers configuration."
   ;; (setq save-interprogram-paste-before-kill t)
   )
 
-(defun dotspacemacs/config ()
+(defun dotspacemacs/user-config ()
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
@@ -194,7 +189,9 @@ layers configuration."
   (editorconfig-mode 1)
 
   ;; Start in transparent mode
-  (spacemacs/toggle-transparent-frame))
+  (spacemacs/toggle-transparent-frame)
+  (require 'bracketed-paste)
+  (bracketed-paste-enable))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
