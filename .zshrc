@@ -55,8 +55,9 @@ antigen bundle npm
 antigen bundle osx
 antigen bundle sudo
 antigen bundle tmux
-antigen theme robbyrussell
 # Tell antigen that you're done.
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
 antigen apply
 
 export ZSH_TMUX_AUTOSTART=true
@@ -64,11 +65,7 @@ export DEFAULT_USER=syndbg
 
 export ANDROID_HOME=~/Library/Android/sdk
 export GOPATH=~/gocode
-PATH="$PATH:/usr/local/sbin:$GOPATH/bin:$GOROOT/bin:$HOME/.cabal/bin"
-# PATH="$HOME/.jenv/bin:$PATH"
-export PATH="$PATH:$HOME/npm/bin:$HOME/.rbenv/bin:$ANDROID_HOME/platform-tools"
-export PATH="$PATH:$HOME/.pyenv/bin"
-
+export PATH="$PATH:/usr/local/sbin:$GOPATH/bin:$GOROOT/bin:$HOME/.rbenv/bin:$HOME/.pyenv/bin"
 # Version managers
 # export JENV_ROOT=/usr/local/var/jenv
 export GOENV_ROOT="$HOME/.goenv"
@@ -76,6 +73,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$GOENV_ROOT/bin:$PYENV_ROOT/bin:$PATH/"
 eval "$(goenv init -)"
 # eval "$(jenv init -)"
+# export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(pyenv init -)"
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 pyenv virtualenvwrapper_lazy
@@ -92,8 +90,8 @@ export RUBY_GC_MALLOC_LIMIT=100000000
 export RUBY_GC_HEAP_INIT_SLOTS=2000000
 export GTAGSLABEL=pygments
 # Use default docker machine
-eval "$(docker-machine env default)"
-export DOCKER_HOST_IP=$(docker-machine ip)
+eval "$(docker-machine env vbox)"
+export DOCKER_HOST_IP=$(docker-machine ip vbox)
 
 update-docker-hosts(){
     # clear existing *.docker.local entries from /etc/hosts
@@ -119,3 +117,13 @@ if [ -f /Users/syndbg/google-cloud-sdk/completion.zsh.inc ]; then
 fi
 
 source <(kubectl completion zsh)
+
+if test -f ~/.gnupg/.gpg-agent-info -a -n "$(pgrep gpg-agent)"; then
+    source ~/.gnupg/.gpg-agent-info
+    export GPG_AGENT_INFO
+    GPG_TTY=$(tty)
+    export GPG_TTY
+else
+    eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
+fi
+export ZSH_THEME="pure"
